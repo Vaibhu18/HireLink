@@ -1,0 +1,22 @@
+{
+  "name": "hirelink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix services && npm install --prefix web && npm run build --prefix web",
+    "start": "npm run start --prefix services"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vaibhu18/HireLink.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Vaibhu18/HireLink/issues"
+  },
+  "homepage": "https://github.com/Vaibhu18/HireLink#readme"
+}
