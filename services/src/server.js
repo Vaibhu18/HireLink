@@ -9,6 +9,7 @@ import { connectDB } from "./lib/db.js";
 import { inngest, functions } from "./lib/inngest.js";
 import { protectRoute } from "./middleware/protectRoute.js"
 import chatRoutes from "./routes/chat.routes.js"
+import sessionRoutes from "./routes/session.routes.js"
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.get("/health", (req, res) => {
     res.status(200).json({ status: "ok", message: "Service is healthy", timestamp: new Date().toISOString() });
 })
 app.use("/api/chat", chatRoutes);
+app.use("/api/sessions", sessionRoutes);
 
 // protectRoute is [], when you pass an array of middleware to express, it automatically flattens and executes them sequentially, one by one
 // app.get("/video-calls", protectRoute, (req, res) => {
