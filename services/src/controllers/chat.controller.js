@@ -3,7 +3,7 @@ import { chatClient } from "../lib/stream.js"
 export const getStreamToken = async (req, res) => {
     try {
         const token = chatClient.createToken(req.user.clerkId);
-        req.status(200).json({
+        res.status(200).json({
             token,
             userId: req.user.clerkId,
             userName: req.user.name,
@@ -11,6 +11,6 @@ export const getStreamToken = async (req, res) => {
         })
     } catch (error) {
         console.log("Error in getStreamToken controller : ", error.message);
-        res.status(500).json({ msg: "Internal Server Error" });
+        res.status(500).json({ message: "Internal Server Error" });
     }
 }
