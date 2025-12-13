@@ -3,7 +3,7 @@ import { useUser } from "@clerk/clerk-react"
 import HomePage from "./pages/HomePage"
 import ProblemPage from "./pages/ProblemPage"
 import { Toaster } from "react-hot-toast"
-import DahsboardPage from "./pages/DahsboardPage"
+import DashboardPage from "./pages/DashboardPage"
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={!isSignedIn ? <HomePage /> : <Navigate to={"/dashboard"} />} />
-        <Route path="/dashboard" element={isSignedIn ? <DahsboardPage /> : <Navigate to={"/"} />} />
+        <Route path="/dashboard" element={isSignedIn ? <DashboardPage /> : <Navigate to={"/"} />} />
         <Route path="/problems" element={isSignedIn ? <ProblemPage /> : <Navigate to={"/"} />} />
       </Routes>
       <Toaster toastOptions={{ duration: 3000 }} />

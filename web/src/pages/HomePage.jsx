@@ -20,7 +20,7 @@ const HomePage = () => {
 
                     {/* AUTH BUTTON */}
                     <SignInButton mode="modal">
-                        <button className="group px-6 py-3 bg-linear-to-r from-primary via-secondary to-accent rounded-xl text-black font-semibold text-sm shadow-lg hover:shadow-xl translate-all duration-300 hover:scale-105 flex items-center gap-2 cursor-pointer">
+                        <button className="group px-6 py-3 bg-linear-to-r from-primary via-secondary to-accent rounded-xl text-black font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 cursor-pointer">
                             <span>Get Started</span>
                             <ArrowRightIcon className="size-4 group-hover:translate-x-0.5 transition-transform" />
                         </button>
