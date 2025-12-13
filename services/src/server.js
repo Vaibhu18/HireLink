@@ -2,10 +2,13 @@ import express from "express"
 import path from "path"
 import cors from "cors"
 import { serve } from "inngest/express"
+import { clerkMiddleware } from "@clerk/express"
 
 import { ENV } from "./lib/env.js";
 import { connectDB } from "./lib/db.js";
 import { inngest, functions } from "./lib/inngest.js";
+import { protectRoute } from "./middleware/protectRoute.js"
+import chatRoutes from "./routes/chat.routes.js"
 
 const app = express();
 
@@ -17,16 +20,19 @@ app.use(cors({
     origin: ENV.CLIENT_URL,
     credentials: true
 }))
+app.use(clerkMiddleware());
 
 app.use("/api/inngest", serve({ client: inngest, functions }))
 
 app.get("/health", (req, res) => {
     res.status(200).json({ status: "ok", message: "Service is healthy", timestamp: new Date().toISOString() });
 })
+app.use("/api/chat", chatRoutes);
 
-app.get("/books", (req, res) => {
-    res.status(200).json({ status: "ok", message: "This is Book endpoint", timestamp: new Date().toISOString() });
-})
+// protectRoute is [], when you pass an array of middleware to express, it automatically flattens and executes them sequentially, one by one
+// app.get("/video-calls", protectRoute, (req, res) => {
+//     res.status(200).json({ status: "ok", message: "This is Book endpoint", timestamp: new Date().toISOString() });
+// })
 
 // Production Ready
 if (ENV.NODE_ENV === "production") {
