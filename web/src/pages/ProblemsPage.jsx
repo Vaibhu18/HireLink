@@ -5,7 +5,7 @@ import { PROBLEMS } from '../data/problems';
 import { ChevronRightIcon, Code2Icon, SearchIcon } from 'lucide-react';
 import { getDifficultyBadgeClass } from '../lib/util';
 
-const ProblemPage = () => {
+const ProblemsPage = () => {
   const [query, setQuery] = useState('');
   const [difficulty, setDifficulty] = useState('All');
 
@@ -136,4 +136,4 @@ const ProblemPage = () => {
   );
 };
 
-export default ProblemPage;
+export default ProblemsPage;

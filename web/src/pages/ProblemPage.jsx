@@ -76,7 +76,7 @@ const ProblemPage = () => {
         const normalizedActual = normalizeOutput(actualOutput);
         const normalizedExpected = normalizeOutput(expectedOutput);
 
-        return normalizedActual == normalizedExpected;
+        return normalizedActual === normalizedExpected;
     };
 
     const handleRunCode = async () => {
@@ -94,7 +94,7 @@ const ProblemPage = () => {
 
             if (testsPassed) {
                 triggerConfetti();
-                toast.success("All tast cases are passed! Great job!");
+                toast.success("All test cases passed! Great job!");
             } else {
                 toast.error("Test cases are failed. Check your output!");
             }
