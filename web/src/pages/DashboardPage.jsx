@@ -9,7 +9,7 @@ import ActiveSessions from "../components/ActiveSessions";
 import RecentSessions from "../components/RecentSessions";
 import CreateSessionModal from "../components/CreateSessionModal";
 
-const DahsboardPage = () => {
+const DashboardPage = () => {
   const navigate = useNavigate();
   const { user } = useUser();
   const [showCreateModal, setShowCreateModal] = useState(false);
@@ -40,9 +40,9 @@ const DahsboardPage = () => {
   const recentSessions = recentSessionsData?.sessions || [];
 
   const isUserInSession = (session) => {
-    if (!user.id) return false;
+    if (!user?.id) return false;
 
-    return session.host?.clerkId === user.id || session.participant?.clerkId === user.id;
+    return session.host?.clerkId === user?.id || session.participant?.clerkId === user?.id;
   };
 
   return (
@@ -81,4 +81,4 @@ const DahsboardPage = () => {
   )
 }
 
-export default DahsboardPage
+export default DashboardPage
