@@ -1,4 +1,278 @@
 export const PROBLEMS = {
+    "move-zeroes": {
+        id: "move-zeroes",
+        title: "Move Zeroes",
+        difficulty: "Easy",
+        category: "Array • Two Pointers",
+        description: {
+            text: "Given an integer array nums, move all 0's to the end while maintaining the relative order of the non-zero elements.",
+            notes: [
+                "You must do this in-place without making a copy of the array.",
+            ],
+        },
+        examples: [
+            {
+                input: "nums = [0,1,0,3,12]",
+                output: "[1,3,12,0,0]",
+            },
+        ],
+        constraints: [
+            "1 ≤ nums.length ≤ 10⁴",
+            "-2³¹ ≤ nums[i] ≤ 2³¹ - 1",
+        ],
+        starterCode: {
+            javascript: `function moveZeroes(nums) {
+  // Write your solution here
+}
+
+let nums = [0,1,0,3,12];
+moveZeroes(nums);
+console.log(nums);`,
+            python: `def moveZeroes(nums):
+    # Write your solution here
+    pass
+
+nums = [0,1,0,3,12]
+moveZeroes(nums)
+print(nums)`,
+            java: `import java.util.*;
+
+class Solution {
+    public static void moveZeroes(int[] nums) {
+        // Write your solution here
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {0,1,0,3,12};
+        moveZeroes(nums);
+        System.out.println(Arrays.toString(nums));
+    }
+}`,
+        },
+        expectedOutput: {
+            javascript: "[1,3,12,0,0]",
+            python: "[1, 3, 12, 0, 0]",
+            java: "[1, 3, 12, 0, 0]",
+        },
+    },
+
+    "valid-anagram": {
+        id: "valid-anagram",
+        title: "Valid Anagram",
+        difficulty: "Easy",
+        category: "String • Hash Table",
+        description: {
+            text: "Given two strings s and t, return true if t is an anagram of s.",
+            notes: [
+                "An anagram is formed by rearranging letters.",
+            ],
+        },
+        examples: [
+            {
+                input: 's = "anagram", t = "nagaram"',
+                output: "true",
+            },
+        ],
+        constraints: [
+            "1 ≤ s.length, t.length ≤ 5 × 10⁴",
+            "s and t consist of lowercase English letters",
+        ],
+        starterCode: {
+            javascript: `function isAnagram(s, t) {
+  // Write your solution here
+}
+
+console.log(isAnagram("anagram", "nagaram"));`,
+            python: `def isAnagram(s, t):
+    # Write your solution here
+    pass
+
+print(isAnagram("anagram", "nagaram"))`,
+            java: `class Solution {
+    public static boolean isAnagram(String s, String t) {
+        // Write your solution here
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isAnagram("anagram", "nagaram"));
+    }
+}`,
+        },
+        expectedOutput: {
+            javascript: "true",
+            python: "True",
+            java: "true",
+        },
+    },
+
+    "contains-duplicate": {
+        id: "contains-duplicate",
+        title: "Contains Duplicate",
+        difficulty: "Easy",
+        category: "Array • Hash Table",
+        description: {
+            text: "Given an integer array nums, return true if any value appears at least twice in the array.",
+            notes: [
+                "Return false if every element is distinct.",
+            ],
+        },
+        examples: [
+            {
+                input: "nums = [1,2,3,1]",
+                output: "true",
+            },
+            {
+                input: "nums = [1,2,3,4]",
+                output: "false",
+            },
+        ],
+        constraints: [
+            "1 ≤ nums.length ≤ 10⁵",
+            "-10⁹ ≤ nums[i] ≤ 10⁹",
+        ],
+        starterCode: {
+            javascript: `function containsDuplicate(nums) {
+  // Write your solution here
+}
+
+console.log(containsDuplicate([1,2,3,1]));`,
+            python: `def containsDuplicate(nums):
+    # Write your solution here
+    pass
+
+print(containsDuplicate([1,2,3,1]))`,
+            java: `import java.util.*;
+
+class Solution {
+    public static boolean containsDuplicate(int[] nums) {
+        // Write your solution here
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(containsDuplicate(new int[]{1,2,3,1}));
+    }
+}`,
+        },
+        expectedOutput: {
+            javascript: "true",
+            python: "True",
+            java: "true",
+        },
+    },
+
+    "best-time-to-buy-sell-stock": {
+        id: "best-time-to-buy-sell-stock",
+        title: "Best Time to Buy and Sell Stock",
+        difficulty: "Easy",
+        category: "Array • Dynamic Programming",
+        description: {
+            text: "You are given an array prices where prices[i] is the price of a given stock on the ith day.",
+            notes: [
+                "You may complete at most one transaction.",
+            ],
+        },
+        examples: [
+            {
+                input: "prices = [7,1,5,3,6,4]",
+                output: "5",
+            },
+        ],
+        constraints: [
+            "1 ≤ prices.length ≤ 10⁵",
+            "0 ≤ prices[i] ≤ 10⁴",
+        ],
+        starterCode: {
+            javascript: `function maxProfit(prices) {
+  // Write your solution here
+}
+
+console.log(maxProfit([7,1,5,3,6,4]));`,
+            python: `def maxProfit(prices):
+    # Write your solution here
+    pass
+
+print(maxProfit([7,1,5,3,6,4]))`,
+            java: `class Solution {
+    public static int maxProfit(int[] prices) {
+        // Write your solution here
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(maxProfit(new int[]{7,1,5,3,6,4}));
+    }
+}`,
+        },
+        expectedOutput: {
+            javascript: "5",
+            python: "5",
+            java: "5",
+        },
+    },
+
+    "merge-sorted-array": {
+        id: "merge-sorted-array",
+        title: "Merge Sorted Array",
+        difficulty: "Easy",
+        category: "Array • Two Pointers",
+        description: {
+            text: "You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n. Merge nums2 into nums1 as one sorted array.",
+            notes: [
+                "nums1 has a length of m + n, where the first m elements denote the elements to merge.",
+                "You must modify nums1 in-place.",
+            ],
+        },
+        examples: [
+            {
+                input: "nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3",
+                output: "[1,2,2,3,5,6]",
+            },
+        ],
+        constraints: [
+            "nums1.length == m + n",
+            "nums2.length == n",
+            "0 ≤ m, n ≤ 200",
+            "-10⁹ ≤ nums1[i], nums2[j] ≤ 10⁹",
+        ],
+        starterCode: {
+            javascript: `function merge(nums1, m, nums2, n) {
+  // Write your solution here
+}
+
+// Test case
+let nums1 = [1,2,3,0,0,0];
+merge(nums1, 3, [2,5,6], 3);
+console.log(nums1);`,
+            python: `def merge(nums1, m, nums2, n):
+    # Write your solution here
+    pass
+
+nums1 = [1,2,3,0,0,0]
+merge(nums1, 3, [2,5,6], 3)
+print(nums1)`,
+            java: `import java.util.*;
+
+class Solution {
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        // Write your solution here
+    }
+
+    public static void main(String[] args) {
+        int[] nums1 = {1,2,3,0,0,0};
+        merge(nums1, 3, new int[]{2,5,6}, 3);
+        System.out.println(Arrays.toString(nums1));
+    }
+}`,
+        },
+        expectedOutput: {
+            javascript: "[1,2,2,3,5,6]",
+            python: "[1, 2, 2, 3, 5, 6]",
+            java: "[1, 2, 2, 3, 5, 6]",
+        },
+    },
+
     "two-sum": {
         id: "two-sum",
         title: "Two Sum",

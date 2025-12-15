@@ -12,11 +12,15 @@ const Navbar = () => {
                 {/* LOGO */}
                 <Link to={"/"} className="flex items-center gap-3 hover:scale-105 transition-transform duration-200">
                     <div className="size-10 rounded-xl bg-linear-to-br from-primary via-secondary to-accent flex items-center justify-center shadow-lg">
-                        <SparklesIcon className="size-5 text-white" />
+                        <SparklesIcon className="size-5 text-black" />
                     </div>
-                    <div className="flex flex-col">
-                        <span className="font-black text-xl bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent font-mono tracking-wide">HireLink</span>
-                        <span className="text-[11px] text-base-content/70 font-medium -mt-1 tracking-wide">Code Together</span>
+                    <div className="flex flex-col leading-tight">
+                        <span className="font-black text-2xl bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent font-mono">
+                            HireLink
+                        </span>
+                        <span className="text-[12px] text-base-content/70 font-medium font-mono -mt-1">
+                            Code Together
+                        </span>
                     </div>
                 </Link>
 
