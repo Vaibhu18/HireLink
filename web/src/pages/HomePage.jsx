@@ -31,10 +31,10 @@ const HomePage = () => {
                         </div>
 
                         <div className="flex flex-col leading-tight">
-                            <span className="font-black text-xl bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent font-mono tracking-wide">
+                            <span className="font-black text-2xl bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent font-mono">
                                 HireLink
                             </span>
-                            <span className="text-[11px] text-base-content/70 font-medium tracking-wide">
+                            <span className="text-[12px] text-base-content/70 font-medium font-mono -mt-1">
                                 Code Together
                             </span>
                         </div>
